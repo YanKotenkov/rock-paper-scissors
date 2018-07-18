@@ -5,11 +5,12 @@ const Choice = ({choices, handleChoice, enemyChoice}) => {
         <div>
             <div>
                 {
+                    choices.length ?
                     choices.map((text, value) =>
-                        <button type="radio" name="choice" key={value} onClick={() => handleChoice(value)}>
+                        <button type="radio" className="choices" name="choice" key={value} onClick={() => handleChoice(value)}>
                             {text}
                         </button>
-                    )
+                    ) : null
                 }
             </div>
             <div>
